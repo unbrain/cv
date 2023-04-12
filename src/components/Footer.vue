@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Icon from './Icon.vue';
 import { siGithub, siSinaweibo, siGmail, siWechat } from 'simple-icons';
 
 const link = {
@@ -31,14 +32,15 @@ const jump = (item: { link: string }) => {
     <div class="flex">
       <div class="find">find me in:</div>
       <template v-for="(item, key) in Object.values(link)" :key="key">
-        <div class="icon-container" v-if="item.icon.title !== 'GitHub'"><span class="icon" v-html="item.icon.svg"
-            @click="jump(item)"></span></div>
+        <div class="icon-container" v-if="item.icon.title !== 'GitHub'">
+          <Icon :icon="item.icon" @click="jump(item)" />
+        </div>
       </template>
 
     </div>
     <div class="flex" @click="jump(link.github)">
       <div class="footer-right">@unbrain</div>
-      <span class="icon" v-html="link.github.icon.svg"></span>
+      <Icon :icon="link.github.icon" />
     </div>
   </div>
 </template>
@@ -69,7 +71,7 @@ const jump = (item: { link: string }) => {
   border-right: 1px solid #1E2D3D;
 }
 
-.icon svg {
+/* .icon svg {
   width: 20px;
   height: 20px;
   margin: 16px 7px;
@@ -79,7 +81,7 @@ const jump = (item: { link: string }) => {
     fill: #eee;
     cursor: pointer;
   }
-}
+} */
 
 .icon-container {
   padding: 0 9px;
