@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { SimpleIcon } from 'simple-icons';
-const props = defineProps<{ icon: SimpleIcon, unset?: boolean, svgStyle?: any }>()
+const props = defineProps<{ icon: any, unset?: boolean, svgStyle?: any }>()
 </script>
 <template>
   <span :class="[$style.icon, unset && $style.unset]" v-html="props.icon.svg"></span>
