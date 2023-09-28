@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^7.0.0",
+    "ant-design-vue": "~4.0.3",
     "simple-icons": "^8.10.0",
     "vue": "^3.2.47",
     "vue-router": "4"

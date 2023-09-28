@@ -47,6 +47,7 @@ const jump = (item: { link: string }) => {
 
 <style lang="postcss">
 .footer {
+  background-color: #222738;
   border: 1px solid #1E2D3D;
   position: fixed;
   padding: 0 22px;

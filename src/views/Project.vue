@@ -3,7 +3,10 @@ import { siVuedotjs, SimpleIcon } from "simple-icons";
 import weibo from "../assets/weibo.png";
 import me from "../assets/me.jpg";
 import creator from "../assets/creator.jpg";
+import webchat from "../assets/webchat.jpg";
 import Icon from "../components/Icon.vue";
+import Menu from '../components/Menu.vue';
+
 interface Project {
   name: string;
   subTitle?: string;
@@ -11,24 +14,36 @@ interface Project {
   icon: string | SimpleIcon;
   desc: string;
   link: string;
+  item?: Array<string>;
 }
 
 const arr: Project[] = [
   {
     name: "PC微博",
-    subTitle: "发布器",
+    subTitle: "",
     picture: weibo,
     icon: siVuedotjs,
     desc: "Duis aute irure dolor in velit esse cillum dolore.",
     link: "https://weibo.com",
+    item: ['发布器', '视频/音频上传', '消息夹子', 'feed卡片', '定时发博', '...等等主要业务场景'],
   },
   {
     name: "pc微博创作者中心",
-    subTitle: "抽奖中心",
+    subTitle: "",
     picture: me,
     icon: siVuedotjs,
     desc: "Duis aute irure dolor in velit esse cillum dolore.",
     link: "https://me.weibo.com/",
+    item: ['抽奖中心', '视频管理', '定时微博管理', '众测平台', '...等等主要业务场景'],
+  },
+  {
+    name: "pc微博消息箱",
+    subTitle: "",
+    picture: webchat,
+    icon: siVuedotjs,
+    desc: "Duis aute irure dolor in velit esse cillum dolore.",
+    link: "https://m.weibo.cn/c/wbox?id=qgb2672tlf",
+    item: ['重构', '主要组件的拆分', '...等等主要业务场景'],
   },
   {
     name: "创作者中心",
@@ -37,6 +52,7 @@ const arr: Project[] = [
     icon: siVuedotjs,
     desc: "Duis aute irure dolor in velit esse cillum dolore.",
     link: "https://m.weibo.cn/c/wbox?id=qgb2672tlf",
+    item: ['所有业务', '主要组件的拆分', '同构方案实现', '...等等主要业务场景'],
   },
 ];
 
@@ -46,8 +62,8 @@ const openProject = (item: Project) => {
 </script>
 
 <template>
-  <div class="flex">
-    <div v-for="(item, index) in arr" :key="index">
+  <div class="grid justify-items-center grid-cols-3 pcontainer">
+    <div v-for="(item, index) in arr" :key="index" >
       <div class="title">
         {{ item.name }} <span>{{ item.subTitle }}</span>
       </div>
@@ -60,12 +76,18 @@ const openProject = (item: Project) => {
           <div class="text">{{ item.desc }}</div>
           <div class="button" @click="openProject(item)">view-project</div>
         </div>
+        <Menu :item="item.item"/>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="postcss" scoped>
+.pcontainer {
+  padding-top: 300px;
+  padding-bottom: 60px;
+  /* padding: 60px 0; */
+}
 .title {
   font-weight: 700;
   font-size: 16px;
@@ -93,7 +115,7 @@ const openProject = (item: Project) => {
   }
   & img {
     display: inline-block;
-
+    object-fit: cover;
     height: 167px;
   }
   & .desc {
