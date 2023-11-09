@@ -5,8 +5,14 @@ import Footer from './components/Footer.vue';
 
 <template>
   <Nav></Nav>
-  <router-view></router-view>
+  <div class=" container">
+    <router-view></router-view>
+  </div>
   <Footer />
 </template>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.container {
+
+}
+</style>
