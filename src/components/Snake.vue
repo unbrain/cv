@@ -419,7 +419,7 @@ onMounted(() => {
           <i class="fas fa-play"></i>
           RESTART
         </button> -->
-      <div id="canvas"></div>
+      <div id="canvas" style="background-color: #222738;"></div>
       <div id="ui">
         <h2>SCORE</h2>
         <span id="score">00</span>
@@ -431,11 +431,12 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
+<style scoped>
 @font-face {
   font-family: "game";
   src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap");
 }
+
 
 * {
   padding: 0;
