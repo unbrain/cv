@@ -27,5 +27,6 @@ export default defineConfig({
     // Class names for the wrapper div
     wrapperClasses: 'markdown-body'
   })],
+  clearScreen: false,
   // base: '/'
 })
