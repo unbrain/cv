@@ -1,5 +1,5 @@
 <script setup>
-import { Menu, MenuItem, Dropdown } from "ant-design-vue";
+// import { Menu, MenuItem, Dropdown } from "ant-design-vue";
 import { reactive, watch, h } from "vue";
 import { DownOutlined } from "@ant-design/icons-vue";
 import "ant-design-vue/dist/reset.css";
@@ -20,8 +20,8 @@ const items = reactive([
   {
     key: "sub2",
     icon: () => h(AppstoreOutlined),
-    label: "更多组成",
-    title: "更多组成",
+    label: "主要负责",
+    title: "主要负责",
     children: [],
   },
 ]);
@@ -51,17 +51,18 @@ watch(
     :items="items"
   ></Menu> -->
 
-  <Dropdown>
+  <a-dropdown>
     <a class="ant-dropdown-link" @click.prevent>
-      更多组成
+      主要负责
       <DownOutlined />
     </a>
     <template #overlay>
-      <Menu>
-        <MenuItem v-for="item in items[0].children" :key="index">
+      <a-menu>
+        <a-menu-item v-for="item in items[0].children" :key="index">
           <a href="javascript:;">{{ item.title }}</a>
-        </MenuItem>
-      </Menu>
+        </a-menu-item>
+      </a-menu>
     </template>
-  </Dropdown>
+  </a-dropdown>
+
 </template>

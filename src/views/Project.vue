@@ -74,7 +74,7 @@ const openProject = (item: Project) => {
         <img :src="item.picture" />
         <div class="desc">
           <div class="text">{{ item.desc }}</div>
-          <div class="button" @click="openProject(item)">view-project</div>
+          <div class="button" @click="openProject(item)">查看</div>
         </div>
         <Menu :item="item.item"/>
       </div>
@@ -100,6 +100,7 @@ const openProject = (item: Project) => {
 
 .gar {
   margin-top: 15px;
+  padding-bottom: 15px;
   border-radius: 15px;
   overflow: hidden;
   background: #011221;
