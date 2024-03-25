@@ -1,9 +1,11 @@
----
+<!-- ---
 title: 初探 MVC
 tags:
 	- 编程
 	- MVC
----
+--- -->
+# 初探 MVC
+
 
 > **MVC模式**（Model–view–controller）是[软件工程](https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B)中的一种[软件架构](https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84)模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。
 >

@@ -46,11 +46,11 @@ alert(arr[2])//undefined
 function isArray(obj){
     return Object.prototype.toString.call(obj) === '[Object Array]'
 }
----
+
 if(arr instanceof Array){
    // 
 }
----
+
 Array.isArray()
 ```
 

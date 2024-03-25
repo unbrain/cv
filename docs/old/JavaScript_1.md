@@ -74,8 +74,7 @@ function function_name(argument){
 ### 5. 考虑优先级问题
 
 在用 .style 修改样式我们检查元素可知道不论是获取还是修改都是在操作行间样式。但是写代码会有时修改了 .style 又修改 .className 这时我们可能在两个中有修改了 background 那么 class 的优先级小于 style，但是很有可能我们并不会注意这一点所以建议只使用其中一种，避免 bug 的出现。
-参考[demo9](demo9.html)
-
+参考demo9
 ### 6. 获取一组元素 getElementsByTagName 实现对一组 div 进行颜色的改变
 
 ```javascript

@@ -45,7 +45,7 @@ tags:
 
 一开始就在这里踩坑了。。。图片模糊到自己不愿看
 
-后面重新看了下 mdn [Canvas的基本用法](<https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage>)
+后面重新看了下 mdn [Canvas的基本用法](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage)
 
 在使用 canvas 的时候，需要设置画布的大小，要使用的是 canvas 的 width 与 height 属性，而不是设置 canvas 的 style 或者CSS样式中的 width 与 height 。
 
@@ -62,7 +62,7 @@ for (let key in this.$refs) {
 
 #### 拼图的绘制
 
-实现有凸起有缺口的拼图形状，使用 canvas 绘制[圆弧](<https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#%E5%9C%86%E5%BC%A7>)。绘制出形状，再填充，后[裁剪](<https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing#A_clip_example>)，再偏移就可以得到，一个离开原始位置的拼图块。这里使用多个 canvas 来实现一个图像的样子来使复杂的东西简单化 [使用多层画布去画一个复杂的场景](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas#%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%B1%82%E7%94%BB%E5%B8%83%E5%8E%BB%E7%94%BB%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%9A%84%E5%9C%BA%E6%99%AF)
+实现有凸起有缺口的拼图形状，使用 canvas 绘制[圆弧](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#%E5%9C%86%E5%BC%A7)。绘制出形状，再填充，后[裁剪](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing#A_clip_example)，再偏移就可以得到，一个离开原始位置的拼图块。这里使用多个 canvas 来实现一个图像的样子来使复杂的东西简单化 [使用多层画布去画一个复杂的场景](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas#%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%B1%82%E7%94%BB%E5%B8%83%E5%8E%BB%E7%94%BB%E4%B8%80%E4%B8%AA%E5%A4%8D%E6%9D%82%E7%9A%84%E5%9C%BA%E6%99%AF)
 
 ```JavaScript
 // 画布 底层
@@ -80,19 +80,21 @@ this.fouCtx.putImageData(ImageData, 0, this.blockY - 2);
 
 #### 使用 css transition 并且使用 CSS module 会遇到问题
 
-当在 module 中写带上 transition name 的样式会自动加上前缀，这样写的样式就没有用，于是将 transition 样式放在了 index.html 中（感觉并不是很好的方法）
+当在 module 中写带上 transition name 的样式会自动加上前缀，这样写的样式就没有用，于是将 transition 样式放在了 index 中（感觉并不是很好的方法）
 
 #### 使用 element.getBoundingClientRect() 获取对于视窗的参数
 
 getBoundingClientRect()  会返回 DOMRect 的对象，当时直接使用 Object.assign 进行拷贝得到了 undefined
 
-搜索可以看到 [[Why are properties of this object (DOMRect) inaccessible to standard Javascript functions?](https://stackoverflow.com/questions/42713229/why-are-properties-of-this-object-domrect-inaccessible-to-standard-javascript)](<https://stackoverflow.com/questions/42713229/why-are-properties-of-this-object-domrect-inaccessible-to-standard-javascript>) 
+搜索可以看到 [Why are properties of this object (DOMRect) inaccessible to standard Javascript functions?](https://stackoverflow.com/questions/42713229/why-are-properties-of-this-object-domrect-inaccessible-to-standard-javascript)
 
 > `Object.assign` and `Object.keys` are working with **own** enumerable properties. `DOMRect`properties are inherited from `DOMRectPrototype` and cannot be accessed by those methods.
 
 当时下面建议使用 lodash。。。以及
 
-> Based on this answer, [7vujy0f0hy found](https://stackoverflow.com/questions/42713229/why-are-properties-of-this-object-domrect-inaccessible-to-standard-javascript/42714159?noredirect=1#comment72552916_42714159) the acceptable [solution](https://jsfiddle.net/esheytbu/):
+> Based on this answer, 
+
+[7vujy0f0hy found](https://stackoverflow.com/questions/42713229/why-are-properties-of-this-object-domrect-inaccessible-to-standard-javascript/42714159?noredirect=1#comment72552916_42714159) the acceptable [solution](https://jsfiddle.net/esheytbu/):
 >
 > ```
 > var ownify = input => 
@@ -116,7 +118,8 @@ this.$refs.canvasFir.getBoundingClientRect().toJSON() is not a function
 
 当时就无助，相当无助，咋还没这方法了。。。于是查看了下 stackoverflow 写得很清楚。。。
 
-> **Warning:** non-standard behavior (doesn't work in [Firefox < 62](https://bugzilla.mozilla.org/show_bug.cgi?id=1186265), including ESR 60 and possibly other browsers other than Chrome)
+> **Warning:** non-standard behavior (doesn't work in 
+[Firefox < 62](https://bugzilla.mozilla.org/show_bug.cgi?id=1186265), including ESR 60 and possibly other browsers other than Chrome)
 
 ```
 JSON.stringify(this.$refs.canvasFir.getBoundingClientRect()) //{}
@@ -147,7 +150,7 @@ mdn 写到
 
 #### 移动端调试
 
-[移动端调试痛点？——送你五款前端开发利器]()
+移动端调试痛点？——送你五款前端开发利器
 
 尝试了一下以下两种方法，并看了下 mac 与 ios （可惜手上没有）
 
@@ -171,7 +174,7 @@ chrome + andriod [谷歌官方文档](https://link.juejin.im/?target=https%3A%2F
 
 之前仅仅是一个 360 的图片自旋转，效果比较糟糕。
 
-学习逐帧动画，并自己使用 ps 对多张图片进行拼接。[How to Use steps() in CSS Animations](<https://designmodo.com/steps-css-animations/>)
+学习逐帧动画，并自己使用 ps 对多张图片进行拼接。[How to Use steps() in CSS Animations](https://designmodo.com/steps-css-animations/)
 
 ```css
 animation: rolls 2s steps(8, start) 1 reverse;

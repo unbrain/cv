@@ -13,7 +13,7 @@ tags:
 
 并不需要过多的 JS 基础就可以实现，尽管代码看起来很不尽人意但是能够完成需要的功能使用者并不关心你的实现方式。[预览](https://unbrain.github.io/myCanvas/)
 
-- [Google](www.google.com)
+- [Google](https://www.google.com)
 - [Canvas MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
 - [iconfont](http://www.iconfont.cn/) (获取需要的图标)
 
