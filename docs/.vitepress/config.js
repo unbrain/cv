@@ -29,10 +29,13 @@ export default {
   description: "zhaoyang cv",
 
   themeConfig: {
+    ignoreDeadLinks: [
+      "./index",
+    ],
     // 主题级选项
     siteTitle: "朝阳的小站",
     nav: [
-      { text: "很久以前", link: "/old/Arts（一）" },
+      { text: "很久以前", link: "/old/初探vim" },
       {
         text: "联系我",
         items: [
@@ -64,12 +67,5 @@ export default {
       ],
     },
   },
-  paths() {
-    return fs.readdirSync("old").map((pkg) => {
-      console.log(pkg);
-      return { params: { pkg } };
-    });
-  },
-  rewrites: {},
   vite: { clearScreen: false },
 };

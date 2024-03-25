@@ -60,13 +60,13 @@ window.onload = function () {
 
 运动框架实例
 
-例子1：“分享到”侧边栏	-->	[demo2.html](./demo2.html)
+例子1：“分享到”侧边栏	-->	`[demo2.html]`
 
 通过目标点，计算速度值
 
 例子2：淡入淡出的图片
 
-用变量存储透明度		-->	[demo3.html](./demo3.html)
+用变量存储透明度		-->	`[demo3.html]`
 
 主要是设置 opcity 并为其赋值
 
@@ -80,7 +80,7 @@ window.onload = function () {
 
 速度 = (目标值-当前值) / 缩放系数
 
-例子：缓冲菜单	-->	[demo4](./demo4.html)
+例子：缓冲菜单	-->	`[demo4]`
 
 Bug：速度取整	speed > 0 ? Math.ceil(speed) ：Math.floor(speed)
 
@@ -96,7 +96,7 @@ Bug：速度取整	speed > 0 ? Math.ceil(speed) ：Math.floor(speed)
 
 ### 多个物体同时运动
 
-例子：多个 Div，鼠标移入变宽	-->	[demo5](demo5.html)
+例子：多个 Div，鼠标移入变宽	-->	`[demo5]`
 
 单定时器，存在问题
 
@@ -108,7 +108,7 @@ Bug：速度取整	speed > 0 ? Math.ceil(speed) ：Math.floor(speed)
 
 参数的传递：物体、目标值
 
-例子：多个 Div 淡入淡出	--> [demo6](./demo.html)
+例子：多个 Div 淡入淡出	--> `[demo6]`
 
 所有东西都不能公用
 
@@ -128,7 +128,7 @@ offset 属性的 Bug
 
 如果想让其他值运动起来，要修改程序
 
-扩展的运动框架	--> [demo7](./demo7.html)
+扩展的运动框架	--> `[demo7]`
 
 运动属性作为参数
 
@@ -180,7 +180,7 @@ Ul 移动——位置计算
 
 另一个问题：ul 开始的宽度并不够， 需要计算后赋值
 
-自己看着敲了一边在默敲一遍，自己的问题还是比较多，细节与思路还是不够。	-->	[demo9](./demo9.html)
+自己看着敲了一边在默敲一遍，自己的问题还是比较多，细节与思路还是不够。	-->	`[demo9](./demo9.html)`
 
 ### 最后运动框架
 

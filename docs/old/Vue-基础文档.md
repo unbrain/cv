@@ -53,7 +53,7 @@ new Vue({
 
 > 生命周期钩子的 `this` 上下文指向调用它的 Vue 实例,所以不要在选项属性上或回调上使用箭头函数
 
-![](./img/lifecycle.png)
+<!-- ![](./img/lifecycle.png) -->
 
 ## 模板语法
 

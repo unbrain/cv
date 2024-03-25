@@ -28,5 +28,5 @@ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 
 
 
-![1550561657989](/tmp/1550561657989.png)
+<!-- ![1550561657989](/tmp/1550561657989.png) -->
 
