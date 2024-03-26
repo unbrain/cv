@@ -62,17 +62,10 @@ h1 {
   line-height: 1.1;
 }
 
-@font-face {
-  font-family: "Fira Code";
-  src: url("./assets//FiraCode-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
 
 
 
-#app {
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -179,6 +172,16 @@ a:hover {
 </style>
 
 <style>
+:root {
+  font-family: "Fira Code";
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("./assets/FiraCode-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

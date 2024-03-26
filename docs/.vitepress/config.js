@@ -1,8 +1,8 @@
 // .vitepress/config.js
 import path from "path";
 import fs from "fs";
-const getOld = () => {
-  const pathName = path.resolve(__dirname, "../old/");
+const getPath = (pathname) => {
+  const pathName = path.resolve(__dirname, `../${pathname}/`);
   console.log(pathName);
   const data = [];
   fs.readdirSync(pathName).forEach((file) => {
@@ -15,7 +15,7 @@ const getOld = () => {
     const title = value.replace(".md", () => "");
     items.push({
       text: `${title}`,
-      link: `/old/${title}`,
+      link: `/${pathname}/${title}`,
       // link: '/old/nav.md'
     });
   }
@@ -29,13 +29,14 @@ export default {
   description: "zhaoyang cv",
 
   themeConfig: {
-    ignoreDeadLinks: [
-      "./index",
-    ],
+    ignoreDeadLinks: ["./index"],
     // 主题级选项
     siteTitle: "朝阳的小站",
     nav: [
-      { text: "很久以前", link: "/old/初探vim" },
+      {
+        text: "关于我",
+        link: "/me",
+      },
       {
         text: "联系我",
         items: [
@@ -44,28 +45,32 @@ export default {
           { text: "Wechat", link: "phone:18349108862" },
         ],
       },
+      // { text: "很久以前", link: "/old/初探vim" },
     ],
     footer: {
       copyright: "Copyright © 2022-present zhaoyang12",
     },
-    sidebar: {
-      // 侧边栏
-      "/old": [
-        // {
-        //   text: "介绍",
-        //   // link: '../index.md',
-        //   collapsible: true,
-        //   items: [
-        //     { text: "使用", link: "/main/使用.md" },
-        //   ],
-        // },
-        {
-          text: "很久以前",
-          collapsed: true,
-          items: getOld(),
-        },
-      ],
-    },
+    sidebar: [
+      {
+        text: "关于我",
+        link: "/me",
+      },
+      {
+        text: "算法",
+        collapsed: true,
+        items: getPath("Algorithm"),
+      },
+      {
+        text: "vue",
+        collapsed: true,
+        items: getPath("packages"),
+      },
+      {
+        text: "很久以前",
+        collapsed: true,
+        items: getPath("old"),
+      },
+    ],
   },
   vite: { clearScreen: false },
 };
