@@ -1,5 +1,4 @@
 <script setup lang="ts" scope="this api replaced by slot-scope in 2.5.0+">
-// import "../style.css";
 import SnakeContainer from "../components/SnakeContainer.vue";
 const jumpGit = () => {
   window.open("https://github.com/unbrain", "_blank");
@@ -39,9 +38,86 @@ const jumpGit = () => {
     background-color: #f9f9f9;
   }
 }
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("./assets//FiraCode-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+#app {
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  /* min-width: 320px; */
+  /* background: #222738; */
+  background: #011627;
+  min-height: 100vh;
+  width: 100vw;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+.card {
+  padding: 2em;
+}
+
 .container {
   display: flex;
   margin-top: 230px;
+  width: 100vw;
+  text-align: center;
 }
 .text {
   margin-right: 130px;
@@ -100,4 +176,22 @@ const jumpGit = () => {
     }
   }
 }
+</style>
+
+<style>
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 </style>
