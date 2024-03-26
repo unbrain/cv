@@ -25,6 +25,7 @@ const getOld = () => {
 
 export default {
   // 站点级选项
+  base: 'cv',
   title: "mars",
   description: "zhaoyang cv",
 
