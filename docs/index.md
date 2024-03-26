@@ -4,8 +4,6 @@ layout: home
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
 import {withBase} from 'vitepress'
-import '../src/style.css'
-import '../src/style.css'
 import Home from '../src/views/Hi.vue'
 const members = [
   {
