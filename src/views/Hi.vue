@@ -13,7 +13,7 @@ const jumpGit = () => {
       <div class="position">> Front-end developer</div>
 
       <div class="flex flex-col items-start code">
-        <div>// complete the game to continue</div>
+        <div class="game_continue">// complete the game to continue</div>
         <div>// you can also see it on my Github page</div>
         <div class="link" @click="jumpGit">
           const <span>githubLink</span> =
@@ -21,7 +21,9 @@ const jumpGit = () => {
         </div>
       </div>
     </div>
-    <SnakeContainer />
+    <SnakeContainer class="snak_c" />
+    <div class="warp1"></div>
+    <div class="warp2"></div>
   </div>
 </template>
 
@@ -61,11 +63,6 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-
-
-
-
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -109,7 +106,7 @@ a:hover {
 .container {
   display: flex;
   margin-top: 230px;
-  width: 100vw;
+  /* width: 100vw; */
   text-align: center;
 }
 .text {
@@ -131,7 +128,6 @@ a:hover {
   font-weight: 400;
   font-size: 62px;
   line-height: 81px;
-
   color: #e5e9f0;
 }
 
@@ -169,6 +165,50 @@ a:hover {
     }
   }
 }
+@media only screen and (max-width: 576px) {
+  .text {
+    align-items: start;
+    margin-right: 0px;
+  }
+  .position {
+    text-align: left;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .game_continue {
+    display: none;
+  }
+  .code {
+    text-align: left;
+    word-break: break-all;
+  }
+  .container {
+    position: relative;
+  }
+  .warp1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -50px;
+    /* top: 112px; */
+    background: #43d9ad;
+    opacity: 0.4;
+    filter: blur(87px);
+    transform: rotate(-94.3deg);
+  }
+
+  .warp2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 173px;
+    /* top: 30px; */
+    background: #4d5bce;
+    opacity: 0.4;
+    filter: blur(87px);
+    transform: rotate(13.51deg);
+  }
+}
 </style>
 
 <style>
@@ -192,6 +232,12 @@ a:hover {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .snak_c {
+    /* visibility: hidden */
+    display: none;
   }
 }
 @tailwind base;
