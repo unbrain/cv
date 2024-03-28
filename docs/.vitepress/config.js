@@ -22,16 +22,19 @@ const getPath = (pathname) => {
 
   return items;
 };
-
+/**
+ * @type {import('vitepress').UserConfigExport}
+ */
 export default {
   // 站点级选项
   title: "朝阳的小站",
   description: "zhaoyang website",
-
+  head: [['link', { rel: 'icon', href: '../img/icon.png' }]],
   themeConfig: {
     ignoreDeadLinks: ["./index"],
     // 主题级选项
-    siteTitle: "朝阳的小站",
+    logo: "../img/icon.png",
+    siteTitle: "",
     nav: [
       {
         text: "朝花夕拾",
@@ -55,7 +58,6 @@ export default {
       copyright: "Copyright © 2022-present zhaoyang",
     },
     sidebar: [
-
       {
         text: "算法",
         collapsed: true,
