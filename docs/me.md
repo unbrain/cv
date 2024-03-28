@@ -8,14 +8,15 @@ import gallery from '../src/components/gallery.vue';
 
 const members = [
   {
-    avatar: '/img/avatar.jpg',
+    avatar: './img/avatar.jpg',
+    name: '刘朝阳',
     links: [
       { icon: 'github', link: 'https://github.com/unbrain' },
     ]
   },
 ]
 </script>
-<gallery />
+<!-- <gallery /> -->
 <div class="margin: 0">
 <VPTeamMembers
     :members="members"
