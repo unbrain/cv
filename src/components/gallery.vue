@@ -80,9 +80,9 @@ h1 {
   height: 106px;
   left: 10px;
   top: 10px;
-  background: black;
+  /* background: black; */
   overflow: hidden;
-  border: solid 1px black;
+  /* border: solid 1px black; */
 }
 #carousel figure:nth-child(1) {
   transform: rotateY(0deg) translateZ(288px);
