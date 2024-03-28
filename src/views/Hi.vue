@@ -111,6 +111,8 @@ a:hover {
 }
 .text {
   margin-right: 130px;
+  text-align: left;
+  word-break: break-all;
 }
 
 .hi {
@@ -148,7 +150,6 @@ a:hover {
   font-size: 16px;
   line-height: 21px;
   color: #607b96;
-
   > div {
     margin-bottom: 10px;
   }
@@ -165,22 +166,17 @@ a:hover {
     }
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 800px) {
   .text {
     align-items: start;
     margin-right: 0px;
   }
   .position {
-    text-align: left;
     font-size: 20px;
     line-height: 26px;
   }
   .game_continue {
     display: none;
-  }
-  .code {
-    text-align: left;
-    word-break: break-all;
   }
   .container {
     position: relative;
@@ -234,7 +230,7 @@ a:hover {
     background-color: #f9f9f9;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 800px) {
   .snak_c {
     /* visibility: hidden */
     display: none;
