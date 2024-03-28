@@ -1,7 +1,8 @@
 // .vitepress/config.js
 import path from "path";
 import fs from "fs";
-import imagemin from 'unplugin-imagemin/vite';
+import imagemin from "unplugin-imagemin/vite";
+import AutoSidebar from "vite-plugin-vitepress-auto-sidebar";
 const getPath = (pathname) => {
   const pathName = path.resolve(__dirname, `../${pathname}/`);
   console.log(pathName);
@@ -30,7 +31,7 @@ export default {
   // 站点级选项
   title: "朝阳的小站",
   description: "zhaoyang website",
-  head: [['link', { rel: 'icon', href: '/icon.png' }]],
+  head: [["link", { rel: "icon", href: "/icon.png" }]],
   themeConfig: {
     ignoreDeadLinks: ["./index"],
     // 主题级选项
@@ -39,7 +40,7 @@ export default {
     nav: [
       {
         text: "朝花夕拾",
-        link: "/packages/Reactive",
+        link: "/md/2vue/Readonly",
       },
       {
         text: "关于我",
@@ -58,23 +59,44 @@ export default {
     footer: {
       copyright: "Copyright © 2022-present zhaoyang",
     },
-    sidebar: [
-      {
-        text: "算法",
+    // sidebar: [
+    //   {
+    //     text: "算法",
+    //     collapsed: true,
+    //     items: getPath("Algorithm"),
+    //   },
+    //   {
+    //     text: "vue",
+    //     collapsed: true,
+    //     items: getPath("packages"),
+    //   },
+    //   {
+    //     text: "很久以前",
+    //     collapsed: true,
+    //     items: getPath("old"),
+    //   },
+    // ],
+  },
+  vite: {
+    clearScreen: false,
+    plugins: [
+      imagemin({ beforeBundle: true }),
+      AutoSidebar({
+        // You can also set options to adjust sidebar data
+        // see option document below
         collapsed: true,
-        items: getPath("Algorithm"),
-      },
-      {
-        text: "vue",
-        collapsed: true,
-        items: getPath("packages"),
-      },
-      {
-        text: "很久以前",
-        collapsed: true,
-        items: getPath("old"),
-      },
+        titleFromFile: true,
+        sideBarResolved: (data) => {
+          data["/md/"][0].items.map((item) => {
+            item.text = item.text.slice(1);
+            return item;
+          });
+          return data;
+        },
+        // beforeCreateSideBarItems: (data) => {
+        //   console.log(data);
+        // }
+      }),
     ],
   },
-  vite: { clearScreen: false , plugins: [imagemin({beforeBundle: true})]},
 };
