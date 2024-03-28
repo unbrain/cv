@@ -211,7 +211,9 @@ a:hover {
 :root {
   font-family: "Fira Code";
 }
-
+.Layout {
+  overflow: hidden;
+}
 @font-face {
   font-family: "Fira Code";
   src: url("./assets/FiraCode-Light.woff") format("woff");
