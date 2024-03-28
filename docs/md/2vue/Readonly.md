@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/27124147/190903434-e1bf729c-7ff9-4505-b5c9-81e1ff0e4d9f.png)
 
-# Reactive Effect 
+# Reactive Effect 2
 
 实现 readonly  isReactive isReadonly stop onstop
 
