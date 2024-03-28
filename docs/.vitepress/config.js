@@ -29,11 +29,11 @@ export default {
   // 站点级选项
   title: "朝阳的小站",
   description: "zhaoyang website",
-  head: [['link', { rel: 'icon', href: '../img/icon.png' }]],
+  head: [['link', { rel: 'icon', href: '/icon.png' }]],
   themeConfig: {
     ignoreDeadLinks: ["./index"],
     // 主题级选项
-    logo: "../img/icon.png",
+    logo: "/icon.png",
     siteTitle: "",
     nav: [
       {
@@ -49,7 +49,7 @@ export default {
         items: [
           { text: "Github", link: "https://github.com/unbrain" },
           { text: "Gmail", link: "mailto:marsorsun@gmail.com" },
-          { text: "Wechat", link: "phone:18349108862" },
+          { text: "Wechat", link: "tel:18349108862" },
         ],
       },
       // { text: "很久以前", link: "/old/初探vim" },
