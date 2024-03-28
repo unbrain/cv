@@ -2,8 +2,8 @@
   <div>
     <div class="container">
       <div id="carousel">
-        <figure v-for="(item, index) in project">
-          <img :src="`./img/gallery/${item.src}.png`" alt="" />
+        <figure v-for="(item, index) in project" @click="open(item.link)">
+          <img :src="withBase(`./img/gallery/${item.src}.png`)" alt="" />
         </figure>
       </div>
     </div>
@@ -11,17 +11,22 @@
 </template>
 
 <script setup>
+import { withBase  } from 'vitepress'
 const project = [
-  { src: "weibo" },
-  { src: "chat" },
-  { src: "creator" },
-  { src: "lottery" },
-  { src: "uploader" },
-  { src: "study" },
-  { src: "video" },
-  { src: "uploader" },
-  { src: "study" },
+  { src: "weibo", link: 'https://weibo.com'},
+  { src: "chat", link: 'https://api.weibo.com/chat'},
+  { src: "creator", link: 'https://me.weibo.com'},
+  { src: "lottery", link: 'https://me.weibo.com/operation/lottery' },
+  { src: "uploader", link: 'https://weibo.com/upload/channel'},
+  { src: "study", link: 'https://me.weibo.com/study' },
+  { src: "video", link: 'https://weibo.com/tv' },
+  { src: "study", link: 'https://me.weibo.com/study' },
+  { src: "video", link: 'https://weibo.com/tv' },
 ];
+
+const open = (link) => {
+  window.open(link, '_blank')
+}
 </script>
 
 <style scoped>
