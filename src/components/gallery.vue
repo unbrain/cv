@@ -3,7 +3,7 @@
     <div class="container">
       <div id="carousel">
         <figure v-for="(item, index) in project" @click="open(item.link)">
-          <img :src="withBase(`/img/gallery/${item.src}.png`)" alt="" />
+          <img :src="withBase(`/gallery/${item.src}.png`)" alt="" />
         </figure>
       </div>
     </div>
