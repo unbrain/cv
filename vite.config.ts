@@ -3,7 +3,6 @@ import vue from '@vitejs/plugin-vue'
 import Markdown from 'unplugin-vue-markdown/vite'
 import markdownItPrism from 'markdown-it-prism'
 import markdownItAttrs from 'markdown-it-attrs'
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue({
