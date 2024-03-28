@@ -25,14 +25,18 @@ const getPath = (pathname) => {
 
 export default {
   // 站点级选项
-  title: "mars",
-  description: "zhaoyang cv",
+  title: "朝阳的小站",
+  description: "zhaoyang website",
 
   themeConfig: {
     ignoreDeadLinks: ["./index"],
     // 主题级选项
     siteTitle: "朝阳的小站",
     nav: [
+      {
+        text: "朝花夕拾",
+        link: "/packages/Reactive",
+      },
       {
         text: "关于我",
         link: "/me",
@@ -48,13 +52,10 @@ export default {
       // { text: "很久以前", link: "/old/初探vim" },
     ],
     footer: {
-      copyright: "Copyright © 2022-present zhaoyang12",
+      copyright: "Copyright © 2022-present zhaoyang",
     },
     sidebar: [
-      {
-        text: "关于我",
-        link: "/me",
-      },
+
       {
         text: "算法",
         collapsed: true,

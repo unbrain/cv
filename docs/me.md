@@ -1,17 +1,21 @@
+---
+layout: home
+---
+
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
-import {withBase} from 'vitepress'
+import gallery from '../src/components/gallery.vue';
 
 const members = [
   {
-    avatar: '/img/WechatIMG203.jpg',
+    avatar: '/img/avatar.jpg',
     links: [
       { icon: 'github', link: 'https://github.com/unbrain' },
     ]
   },
 ]
 </script>
-
+<gallery />
 <div class="margin: 0">
 <VPTeamMembers
     :members="members"
