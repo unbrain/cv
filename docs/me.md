@@ -8,7 +8,7 @@ import gallery from '../src/components/gallery.vue';
 import { withBase, useData } from 'vitepress'
 const members = [
   {
-    avatar: withBase('/img/avatar.jpg'),
+    avatar: withBase('/avatar.jpg'),
     name: '刘朝阳',
     links: [
       { icon: 'github', link: 'https://github.com/unbrain' },
