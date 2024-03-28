@@ -3,7 +3,7 @@
     <div class="container">
       <div id="carousel">
         <figure v-for="(item, index) in project">
-          <img :src="`/img/gallery/${item.src}.png`" alt="" />
+          <img :src="`./img/gallery/${item.src}.png`" alt="" />
         </figure>
       </div>
     </div>

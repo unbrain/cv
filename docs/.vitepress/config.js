@@ -1,6 +1,7 @@
 // .vitepress/config.js
 import path from "path";
 import fs from "fs";
+import imagemin from 'unplugin-imagemin/vite';
 const getPath = (pathname) => {
   const pathName = path.resolve(__dirname, `../${pathname}/`);
   console.log(pathName);
@@ -75,5 +76,5 @@ export default {
       },
     ],
   },
-  vite: { clearScreen: false },
+  vite: { clearScreen: false , plugins: [imagemin({beforeBundle: true})]},
 };

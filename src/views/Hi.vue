@@ -28,19 +28,6 @@ const jumpGit = () => {
 </template>
 
 <style lang="postcss" scoped>
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -64,18 +51,7 @@ h1 {
   line-height: 1.1;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+
 
 @tailwind base;
 @tailwind components;
@@ -203,6 +179,24 @@ a:hover {
     opacity: 0.4;
     filter: blur(87px);
     transform: rotate(13.51deg);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  .hi {
+    color: #213547;
+  }
+  .name {
+    color: #213547;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
   }
 }
 </style>
