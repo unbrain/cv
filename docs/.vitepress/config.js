@@ -44,7 +44,7 @@ export default {
       },
       {
         text: "关于我",
-        link: "/me",
+        link: "/md/0me/me",
       },
       {
         text: "联系我",
