@@ -15,7 +15,7 @@ const jumpGit = () => {
       <div class="flex flex-col items-start code">
         <div class="game_continue">// complete the game to continue</div>
         <div>// you can also see it on my Github page</div>
-        <div class="link" @click="jumpGit">
+        <div class="link" @click="jumpGit" @mousedown="jumpGit">
           const <span>githubLink</span> =
           <span class="orange">“https://github.com/unbrain”</span>
         </div>
