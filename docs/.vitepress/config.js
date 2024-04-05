@@ -78,13 +78,14 @@ export default {
         // see option document below
         collapsed: true,
         titleFromFile: true,
-        sideBarResolved: (data) => {
-          data["/md/"][0].items.map((item) => {
-            item.text = item.text.slice(1);
-            return item;
-          });
-          return data;
-        },
+        // sideBarResolved: (data) => {
+        //   data["/md/"][0].items.map((item) => {
+        //     item.text = item.text.slice(1);
+        //     return item;
+        //   });
+        //   return data;
+        // },
+        deletePrefix: /[0-9]/
         // beforeCreateSideBarItems: (data) => {
         //   console.log(data);
         // }
