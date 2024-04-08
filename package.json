@@ -19,7 +19,7 @@
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-prism": "^2.3.0",
     "prismjs": "^1.29.0",
-    "simple-icons": "^8.15.0",
+    "simple-icons": "^11.0.0",
     "unplugin-vue-markdown": "^0.26.0",
     "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
     "vue": "^3.4.21",
